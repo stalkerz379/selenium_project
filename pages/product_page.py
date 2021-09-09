@@ -6,7 +6,7 @@ import time
 class ProductPage(BasePage):
     def product_page(self):
         self.add_to_cart_button_press()
-        self.solve_quiz_and_get_code()
+
         self.should_be_message_added_to_cart()
         self.should_be_message_cart_satisfies_order()
         self.price_should_be_equal_to()
@@ -14,6 +14,7 @@ class ProductPage(BasePage):
     def add_to_cart_button_press(self):
         add_to_cart = self.browser.find_element(*ProductPageLocators.ADD_TO_CART_BUTTON)
         add_to_cart.click()
+        self.solve_quiz_and_get_code()
 
     def get_product_price_and_name(self):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
@@ -33,3 +34,11 @@ class ProductPage(BasePage):
         product_name, product_price = self.get_product_price_and_name()
         block_with_product_price = self.browser.find_element(*ProductPageLocators.BLOCK_WITH_PRICE).text
         assert product_price == block_with_product_price, f'{product_price} is not equal to {block_with_product_price}'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE_BLOCK), \
+            'Success message is presented, but should be not'
+
+    def should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE_BLOCK), \
+            "Element has not disappeared, but should disappear"
