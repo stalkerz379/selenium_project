@@ -6,7 +6,7 @@ import time
 class ProductPage(BasePage):
     def product_page(self):
         self.add_to_cart_button_press()
-
+        self.add_to_cart_button_press()
         self.should_be_message_added_to_cart()
         self.should_be_message_cart_satisfies_order()
         self.price_should_be_equal_to()
