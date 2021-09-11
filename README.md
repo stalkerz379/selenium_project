@@ -7,10 +7,10 @@ Want to say **thanks** for the creators of this web app and having a chance to p
 
 For running the tests, please, create new virtual environment and make sure you have installed all necessary packets/modules, you can find the lists of packets in **requirements.txt**. The instruction how to install the packets is in the next section.
 
-To run the test you can use the next command: **pytest -v --tb=line \path\to\test_product_page.py**.
+To run the tests you can use the next command: **pytest -v --tb=line \path\to\test_product_page.py**.
 There are some more option to run the tests:
 1. **--language=your_language** - optional, you can choose the language to run the tests. By the default English is selected.
-2. **-m** - optional, pytest markers, you can find the full list in **pytest.ini**.
+2. **-m** - optional, pytest markers, you can find the full list in **pytest.ini**.g
 
 ### The Structure of this repository
 Here is the basic structure of this repository:
