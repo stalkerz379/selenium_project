@@ -10,13 +10,17 @@ link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?prom
 def test_guest_can_add_product_to_basket(browser):
     page = ProductPage(browser, link)
     page.open()
-    page.product_page()
+    page.add_to_cart_button_press()
+    page.should_be_message_added_to_cart()
+    page.should_be_message_cart_satisfies_order()
+    page.price_should_be_equal_to()
 
 
 @pytest.mark.need_review
 def test_guest_cant_see_product_in_the_basket_opened_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
+    page.go_to_basket()
     page.should_not_be_success_message()
 
 
