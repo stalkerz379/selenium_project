@@ -1,9 +1,26 @@
 ## Final Project
+
+### Disclaimer
+This project is the **training project**. The code and the structure does not pretend to satisfy the tastes of a test automation gurus)) :wink:
+The project based on [this application](http://selenium1py.pythonanywhere.com/).
+Want to say **thanks** for the creators of this web app and having a chance to practice. :+1:
+
+### The Structure of this repository
 Here is the basic structure of this repository:
 1. The folder pages contains:
    - **base_page.py** - this file describes the basic class and methods (that are the same for all pages) for the web page. All other classes inherit from this class.
-   - **basket_page.py** - this files hold the class and methods for the basket page, it inherits from the BasePage class.
-   - **locators.py**
+   - **basket_page.py** - this files contains the class and methods for the basket page, it inherits from the BasePage class.
+   - **locators.py** - this file contains all the locators for all classes.
+   - **login_page.py** - this file contains the class and methods for the login page. It inherits from the BasePage class.
+   - **main_page.py** - this file contains the class and methods for the main page. It inherits from the BasePage class.
+   - **product_page.py** - this file contains the class and methods for the product page. It inherits from the BasePage class.
+2. **__init__.py** - this file allows python to interpret directories as packages.
+3. **conftest.py** - this is the basic file that contains fixture for the browser, at the current moment it works by default with **Chrome**. Also it contains a command line option to select the language. You can select the language by adding a flag **--language=your_language** when running tests. **By the default the language is English.**
+4. **pytest.ini** - this file contains the markers in separate file. You can run tests with selected marked. E.g. add a flag **-m your_flag_name** as a command line argument when running the tests.
+5. **requirements.py** - this file contains all modules that were installed during the process of creating this repository. **If you have any troubles with running the tests, please, make sure that you have installed all the necessary packets. You can install the packets: *pip install -r \path\to\requirements.txt*.**
+6. **test_main_page.py** - this file contains the tests for the main page of the web app. 
+7. **test_product_page.py** - this file contains the tests for the product page.
+
 ### Requirements for the final project
 
 #### Base page
