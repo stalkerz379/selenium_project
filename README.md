@@ -1,6 +1,9 @@
-# selenium_project
 ## Final Project
-
+Here is the basic structure of this repository:
+1. The folder pages contains:
+   - **base_page.py** - this file describes the basic class and methods (that are the same for all pages) for the web page. All other classes inherit from this class.
+   - **basket_page.py** - this files hold the class and methods for the basket page, it inherits from the BasePage class.
+   - **locators.py**
 ### Requirements for the final project
 
 #### Base page
