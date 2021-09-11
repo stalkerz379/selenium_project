@@ -23,7 +23,7 @@ Here is the basic structure of this repository:
 
 ### Requirements for the final project
 
-**Pay attention that at the current moment all the requirements are on russian. Sorry, for this inconvenience.**
+**Pay attention that at the current moment all the requirements are in russian. Sorry, for this inconvenience.**
 
 #### Base page
 - [x] Создайте в своем проекте папку pages, там мы будем хранить все наши Page Object 
