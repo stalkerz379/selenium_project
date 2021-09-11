@@ -10,7 +10,7 @@ For running the tests, please, create new virtual environment and make sure you 
 To run the tests you can use the next command: **pytest -v --tb=line \path\to\test_product_page.py**.
 There are some more option to run the tests:
 1. **--language=your_language** - optional, you can choose the language to run the tests. By the default English is selected.
-2. **-m** - optional, pytest markers, you can find the full list in **pytest.ini**.g
+2. **-m** - optional, pytest markers, you can find the full list in **pytest.ini**.
 
 ### The Structure of this repository
 Here is the basic structure of this repository:
